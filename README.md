@@ -351,4 +351,55 @@ Test cases to explore the boundary for the non-triangle case:
 
 <img width="639" alt="Untitled" src="https://user-images.githubusercontent.com/82770981/232833976-e846513e-a4df-441f-9f0d-6f2989f6908d.png">
 
+### 1. Convert the Java code comprising the beginning of the doGraham method into a control flow graph (CFG)
+#### Control Flow Graph
+
+![Untitled Diagram drawio (1)](https://user-images.githubusercontent.com/82770981/232841181-56a5bf6e-0d75-4bc7-adac-f754f6f55710.png)
+
+### 2. Construct test sets for your flow graph that are adequate for the following criteria:
+##### a. Statement Coverage.
+##### b. Branch Coverage.
+##### c. Basic Condition Coverage.
+
+```
+1.  int i, j, min, M;
+2.  Point t;
+3.  min = 0;
+4.  for(i=1; i < p.size(); ++i) {
+5.      if (p.get(i).y < p.get(min).y) {
+6.          min = i;
+7.      }
+8.  }
+9.  for (i=0; i < p.size(); ++i) {
+10.     if ((p.get(i).y == p.get(min).y) && (p.get(i).x < p.get(min).x)) {
+11.         min = i;
+12.     }
+13. }
+```
+
+| Test Case | p | Statements Covered | Branches Covered | Basic Conditions Covered |
+| --- | --- | --- | --- | --- |
+| 1 | [(2,2), (2,3), (1,3), (1,4)] | {1,2,3,4,5,7,8} | {5F,8F} | {5F,8F} |
+| 2 | [(2,3), (3,4), (1,2), (5,6)] | {1,2,3,4,5,6,7} | {5F} | {5F} |
+| 3 | [(1,5), (2,7), (3,5), (4,5), (5,6)] | {1,2,3,4,5-13} | {5T,F} | {5T,F} |
+| 4 | [(1,2)] | {1-8} | {5F} | {5F} |
+| 5 | [] | {1-3} | {} | {} |
+| 6 | [(1,2), (2,3), (3,4)] | {1-8} | {5F} | {5F} |
+| 7 | [(3,4), (2,3), (1,2)] | {1-13} | {5T,F} | {5T,F} |
+| 8 | [(1,2), (2,3), (3,4), (4,5)] | {1-8} | {5F} | {5F} |
+| 9 | [(4,5), (3,4), (2,3), (1,2)] | {1-13} | {5T,F} | {5T,F} |
+| 10 | [(1,2), (2,3), (3,4), (4,5), (5,6)] | {1-8} | {5F} | {5F} |
+
+In this table:
+
+- “p” refers to the input vector for the **`doGraham`** method.
+- “Statements Covered” refers to the statements in the code fragment that are executed by the test case.
+- “Branches Covered” refers to the branches in the control flow graph that are executed by the test case. The outcome of each branch is shown in parentheses.
+- “Basic Conditions Covered” refers to the conditions in the code fragment that are evaluated by the test case. The outcome of each condition is shown in parentheses.
+
+
+##### Testing 
+<img width="739" alt="image" src="https://user-images.githubusercontent.com/82770981/232846624-0bf66a6d-752c-4acf-90fe-c88af66bccd3.png">
+<img width="772" alt="image" src="https://user-images.githubusercontent.com/82770981/232846680-19aa44ed-409a-48df-8b49-3137ea4e2d7a.png">
+
 
