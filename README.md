@@ -63,6 +63,7 @@ Write a set of test cases (i.e., test suite) – specific set of data – to pro
 | 6 | 1 | 3 | 2000 | 29-2-2000 |
 | 7 | 29 | 2 | 1900 | Invalid |
 | 8 | 1 | 3 | 1900 | 28-2-1900 |
+<img width="780" alt="image" src="https://user-images.githubusercontent.com/82770981/232835123-23f970f3-d647-49b1-afcd-8803525cdb0b.png">
 
 Equivalence Partitioning : EP
 
@@ -108,6 +109,8 @@ Equivalence Partitioning(EP) and Boundary Value Analysis(BVA).
 | BVA | [11] | 12 | -1 |
 | EP | [13,14] | 15 | -1 |
 
+<img width="780" alt="image" src="https://user-images.githubusercontent.com/82770981/232836228-de685a62-eb40-444e-9ad4-8809bb15f15b.png">
+
 ### **P2. The function countItem returns the number of times a value v appears in an array of integers**
 
 ```cpp
@@ -148,6 +151,9 @@ int countItem(int v, int a[])
 | EP | [13,14] | 15 | 0 |
 | EP | [1,1,2,2] | 1 | 2 |
 | BVA | [3,3,3] | 3 | 3 |
+
+<img width="768" alt="image" src="https://user-images.githubusercontent.com/82770981/232836741-83979f94-6f85-42f0-9b32-462f3141c1ca.png">
+
 
 ### **P3. The function binarySearch searches for a value v in an ordered array of integers a. If v appears in the array a, then the function returns an index i, such that a[i] == v; otherwise, -1 is returned.**
 
@@ -190,6 +196,8 @@ int binarySearch(int v, int a[])
 | BVA | [10] | 10 | 0 |
 | BVA | [11] | 12 | -1 |
 | EP | [13,14] | 15 | -1 |
+<img width="759" alt="image" src="https://user-images.githubusercontent.com/82770981/232836631-d58d90a8-411f-4875-913c-452606950e22.png">
+
 
 ### **P4. The following problem has been adapted from The Art of Software Testing, by G. Myers (1979). The function triangle takes three integer parameters that are interpreted as the lengths of the sides of a triangle. It returns whether the triangle is equilateral (three lengths equal), isosceles (two lengths equal), scalene (no lengths equal), or invalid (impossible lengths).**
 
@@ -231,6 +239,8 @@ int triangle(int a, int b, int c) {
 | BVA | (1,1,1) | EQUILATERAL |
 | BVA | (1,2,2) | ISOSCELES |
 | BVA | (2,2,3) | ISOSCELES |
+<img width="773" alt="image" src="https://user-images.githubusercontent.com/82770981/232837187-b6e85cd3-f6cd-478c-a4a9-58849529ae1b.png">
+
 
 ### **P5. The function prefix (String s1, String s2) returns whether or not the string s1 is a prefix of string s2 (you may assume that neither s1 nor s2 is null).**
 
@@ -266,6 +276,7 @@ public static boolean prefix(String s1, String s2) {
 | BVA | (“p”, “prefix”) | true |
 | BVA | (“pr”, “prefix”) | true |
 | BVA | (“p”, “postfix”) | false |
+<img width="767" alt="image" src="https://user-images.githubusercontent.com/82770981/232836911-50629f45-27c4-4519-9722-9ebd6ce4a1b4.png">
 
 ### **P6: Consider again the triangle classification program (P4) with a slightly different specification: The program reads floating values from the standard input. The three values A, B, and C are interpreted as representing the lengths of the sides of a triangle. The program then prints a message to the standard output that states whether the triangle, if it can be formed, is scalene, isosceles, equilateral, or right angled. 
 Determine the following for the above program:**
@@ -338,4 +349,6 @@ Test cases to explore the boundary for the non-triangle case:
 
 **The code below is part of a method in the ConvexHull class in the VMAP system. The following is a small fragment of a method in the ConvexHull class. For the purposes of this exercise you do not need to know the intended function of the method. The parameter p is a Vector of Point objects, p.size() is the size of the vector p, (p.get(i)).x is the x component of the ith point appearing in p, similarly for (p.get(i)).y. This exercise is concerned with structural testing of code and so the focus is on creating test sets that satisfy some particular coverage criterion.**
 
-![Untitled](IT314-Lab7%20812e5574e7a143b28461d54c90b22219/Untitled.png)
+<img width="639" alt="Untitled" src="https://user-images.githubusercontent.com/82770981/232833976-e846513e-a4df-441f-9f0d-6f2989f6908d.png">
+
+
